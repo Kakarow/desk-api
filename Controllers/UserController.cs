@@ -31,7 +31,7 @@ public class UserController : ControllerBase
         var user = _service.GetById(id);
         if (user is null)
         {
-            return NotFound();
+            return NotFound("User not found");
         }
         return user;
     }
@@ -90,7 +90,7 @@ public class UserController : ControllerBase
         var user = _service.GetById(id);
         if (user is null)
         {
-            return NotFound();
+            return NotFound("User not found");
         }
 
         _service.DeleteById(id);

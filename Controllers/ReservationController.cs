@@ -91,7 +91,7 @@ public class ReservationController : ControllerBase
         }
         if (!user.username.Equals(name))
         {
-            return Forbid("NOT YOURS RESERVATION CUNT");
+            return Forbid("Not yours reservation");
         }
         _service.DeleteById(id);
 
@@ -110,7 +110,7 @@ public class ReservationController : ControllerBase
         }
         if (!user.username.Equals(name))
         {
-            return Forbid("NOT YOURS RESERVATION CUNT");
+            return Forbid("Not yours reservation");
         }
         _service.Change(id, reservationDto);
 
